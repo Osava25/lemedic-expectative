@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Bienvenidos a Le Medic</title>
+</head>
+<body>
+	<section class="md:max-w-full md:h-screen h-full grid md:grid-cols-3 grid-cols-1 gap-0">
+        <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2] px-6 py-12">
+            <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1>
+        </div>
+        <div class="flex flex-col items-center justify-center py-12">
+				<Image src={logoLeMedic} alt="texto descriptivo" width="200" />
+				<div class="w-5/6 px-8 py-8 bg-gray-100 mt-3">
+					<h2 class="text-verde-text-title-le-medic font-medium text-xl">Déjanos tus datos y se el primero en acceder a la lista cero de preventa</h2>
+					<form method="post" action="" name="contact-form">
+						<div class="mt-5 grid grid-cols-1 gap-x-3 gap-y-6 sm:grid-cols-6 max-w-2xl">
+							<div class="sm:col-span-3">
+							<label for="first-name" class="block font-medium text-sm leading-3 text-verde-text-title-le-medic">Nombre</label>
+							<div class="mt-2">
+								<input type="text" name="nombre" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+							</div>
+							</div>
+					
+							<div class="sm:col-span-3">
+							<label for="last-name" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Apellidos</label>
+							<div class="mt-2">
+								<input type="text" name="apellido" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+							</div>
+							</div>
+					
+							<div class="col-span-full">
+							<label for="email" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Correo Electrónico</label>
+							<div class="mt-2">
+								<input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+							</div>
+							</div>
+					
+							<div class="sm:col-span-3">
+							<label for="country" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Celular</label>
+							<div class="mt-2">
+								<input id="celular" name="celular" type="number" autocomplete="celular" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+							</div>
+							</div>
+					
+							<div class="sm:col-span-3">
+							<label for="city" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Ciudad</label>
+							<div class="mt-2">
+								<input type="text" name="ciudad" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+							</div>
+							</div>
+								<div class="col-span-full">
+								  <div class="relative flex gap-x-3">
+									<div class="flex h-6 items-center">
+									  <input id="comments" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" required>
+									</div>
+									<div class="text-sm leading-6">
+									  <label for="comments" class="font-medium text-verde-text-title-le-medic text-xs leading-3">Acepto los términos y condiciones del tratamiento de mis datos personales conforme a la Ley</label>
+									</div>
+								  </div>
+								</div>
+							  
+						</div>
+						<div class="mt-6 flex items-center justify-end gap-x-6">
+							<button type="submit" class="rounded-md bg-verde-text-title-le-medic px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lo Quiero</button>
+						</div>
+					</form>
+				</div>
+        </div>
+    </section>
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxvuGHsdve4EVANAQGbNzRF1ywHcboaUFWC5-R_h79EEObp7DkW0UjuEgCo2ug7wIBgBw/exec'
+		const form = document.forms['contact-form']
+
+		form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => alert("¡Gracias! Tu mensaje fue enviado satisfactoriamente" ))
+		.then(() => { window.location.reload(); })
+		.catch(error => console.error('Error!', error.message))
+		})
+	</script>
+</body>
+</html>
