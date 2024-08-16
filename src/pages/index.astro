@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
 import imgBg from '../img/bg-lemedic-exp-min.jpg'
+import SliderExpectative from '../components/SliderExpectative.astro'
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -13,15 +14,16 @@ import imgBg from '../img/bg-lemedic-exp-min.jpg'
 		<title>Bienvenidos a Le Medic</title>
 </head>
 <body>
-	<section class="md:max-w-full md:h-screen h-full grid md:grid-cols-3 grid-cols-1 gap-0">
-        <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2] px-6">
-			<Image class='object-cover' src={imgBg} alt="Le Medic" />
+	<section class="xl:max-w-full xl:h-screen h-full grid xl:grid-cols-3 grid-cols-1 gap-0">
+        <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2]">
+			<SliderExpectative />
+			<!-- <Image class='object-cover' src={imgBg} alt="Le Medic" /> -->
             <!-- <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1> -->
         </div>
         <div class="flex flex-col items-center justify-center py-12">
 				<Image src={logoLeMedic} alt="texto descriptivo" width="200" />
 				<div class="w-5/6 px-8 py-8 bg-gray-100 mt-3">
-					<h2 class="text-verde-text-title-le-medic font-medium text-xl">Déjanos tus datos y se el primero en acceder a la lista cero de preventa</h2>
+					<h2 class="text-verde-text-title-le-medic font-medium text-xl">Déjanos tus datos y participa en la preventa</h2>
 					<form method="post" action="" name="contact-form">
 						<div class="mt-5 grid grid-cols-1 gap-x-3 gap-y-6 sm:grid-cols-6 max-w-2xl">
 							<div class="sm:col-span-3">
@@ -71,7 +73,7 @@ import imgBg from '../img/bg-lemedic-exp-min.jpg'
 							  
 						</div>
 						<div class="mt-6 flex items-center justify-end gap-x-6">
-							<button type="submit" class="rounded-md bg-verde-text-title-le-medic px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Lo Quiero</button>
+							<button type="submit" class="rounded-md bg-verde-text-title-le-medic px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Quiero información</button>
 						</div>
 					</form>
 				</div>
