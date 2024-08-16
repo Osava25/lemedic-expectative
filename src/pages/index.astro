@@ -3,12 +3,6 @@ import { Image } from 'astro:assets';
 import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
 import imgBg from '../img/bg-lemedic-exp-min.jpg'
 import SliderExpectative from '../components/SliderExpectative.astro'
-import slide1 from '../img/slider/slide1.jpg';
-import slide2 from '../img/slider/slide2.jpg'
-import slide3 from '../img/slider/slide3.jpg'
-import slide4 from '../img/slider/slide4.jpg'
-import slide5 from '../img/slider/slide5.jpg'
-import slide6 from '../img/slider/slide6.jpg'
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -22,26 +16,7 @@ import slide6 from '../img/slider/slide6.jpg'
 <body>
 	<section class="xl:max-w-full xl:h-screen h-full grid xl:grid-cols-3 grid-cols-1 gap-0">
         <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2]">
-			<div class="f-carousel" id="myCarousel">
-				<div class="f-carousel__slide">
-					<Image src={slide1} alt="Img 1" />
-				</div>
-				<div class="f-carousel__slide">
-					<Image src={slide2} alt="Img 1" />
-				</div>
-				<div class="f-carousel__slide">
-					<Image src={slide3} alt="Img 1" />
-				</div>
-				<div class="f-carousel__slide">
-					<Image src={slide4} alt="Img 1" />
-				</div>
-				<div class="f-carousel__slide">
-					<Image src={slide5} alt="Img 1" />
-				</div>
-				<div class="f-carousel__slide">
-					<Image src={slide6} alt="Img 1" />
-				</div>
-			</div>
+			
 			<!-- <Image class='object-cover' src={imgBg} alt="Le Medic" /> -->
             <!-- <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1> -->
         </div>
@@ -104,79 +79,6 @@ import slide6 from '../img/slider/slide6.jpg'
 				</div>
         </div>
     </section>
-	<style>
-		#myCarousel {
-			--f-carousel-slide-height: 60%;
-			--f-carousel-spacing: 10px;
-	
-			height: 35vh;
-		}
-		.f-carousel {
-			--f-button-width: 38px;
-			--f-button-height: 38px;
-	
-			--f-button-svg-width: 16px;
-			--f-button-svg-height: 16px;
-			--f-button-svg-stroke-width: 2.5;
-	
-			--f-button-color: #385B58;
-			--f-button-border-radius: 50%;
-			--f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
-				0 3px 7px -3px rgb(0 0 0 / 30%);
-	
-			--f-button-bg: #43d1b781;
-			--f-button-hover-bg: #43d1b7;
-			--f-button-active-bg: #43D1B7;
-			--f-carousel-dots-height: 0;
-	
-			object-fit: cover;
-		}
-		.f-carousel img {
-			height: 35vh;
-			object-fit: cover;
-		}
-		.f-carousel__dots {
-			display: none;
-		}
-		@media (min-width: 426px) and (max-width: 800px){
-			#myCarousel {
-				height: 70vh;
-			}
-	
-			.f-carousel img {
-				height: 70vh;
-				object-fit: cover;
-			 }
-		}
-	
-		@media screen and (min-width: 769px){
-			#myCarousel {
-				height: 100vh;
-			}
-	
-			.f-carousel img {
-				height: 100vh;
-				width: 100%;
-				object-fit: cover;
-			 }
-		}
-	</style>
-	<script is:inline>
-		import { Carousel } from "@fancyapps/ui/dist/carousel/carousel.esm.js";
-		import "@fancyapps/ui/dist/carousel/carousel.css";
-	
-		import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js";
-		import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
-		const container = document.getElementById("myCarousel");
-		const options = { 
-			Autoplay: {
-				timeout: 4000,
-			}, 
-			Dots: false
-		};
-		new Carousel(container, options, { Autoplay });
-	</script>
-	
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbxvuGHsdve4EVANAQGbNzRF1ywHcboaUFWC5-R_h79EEObp7DkW0UjuEgCo2ug7wIBgBw/exec'
 		const form = document.forms['contact-form']
