@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
+import imgBg from '../img/bg-lemedic-exp-min.jpg'
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -13,8 +14,9 @@ import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
 </head>
 <body>
 	<section class="md:max-w-full md:h-screen h-full grid md:grid-cols-3 grid-cols-1 gap-0">
-        <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2] px-6 py-12">
-            <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1>
+        <div class="col-span-2 flex items-center justify-start bg-gradient-to-r from-[#47D8B8] to-[#3CBAB2] px-6">
+			<Image class='object-cover' src={imgBg} alt="Le Medic" />
+            <!-- <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1> -->
         </div>
         <div class="flex flex-col items-center justify-center py-12">
 				<Image src={logoLeMedic} alt="texto descriptivo" width="200" />
@@ -25,41 +27,41 @@ import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
 							<div class="sm:col-span-3">
 							<label for="first-name" class="block font-medium text-sm leading-3 text-verde-text-title-le-medic">Nombre</label>
 							<div class="mt-2">
-								<input type="text" name="nombre" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+								<input type="text" name="nombre" id="first-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-verde-text-title-le-medic sm:text-sm sm:leading-6" required>
 							</div>
 							</div>
 					
 							<div class="sm:col-span-3">
 							<label for="last-name" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Apellidos</label>
 							<div class="mt-2">
-								<input type="text" name="apellido" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+								<input type="text" name="apellido" id="last-name" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-verde-text-title-le-medic sm:text-sm sm:leading-6" required>
 							</div>
 							</div>
 					
 							<div class="col-span-full">
 							<label for="email" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Correo Electrónico</label>
 							<div class="mt-2">
-								<input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+								<input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-verde-text-title-le-medic invalid:focus:ring-red-400 sm:text-sm sm:leading-6 peer">
+								<p class="text-red-400 hidden peer-invalid:block">El correo es inválido</p>
 							</div>
 							</div>
-					
 							<div class="sm:col-span-3">
 							<label for="country" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Celular</label>
 							<div class="mt-2">
-								<input id="celular" name="celular" type="number" autocomplete="celular" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" required>
+								<input id="celular" name="celular" type="number" autocomplete="celular" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-verde-text-title-le-medic sm:text-sm sm:leading-6" required>
 							</div>
 							</div>
 					
 							<div class="sm:col-span-3">
 							<label for="city" class="block text-sm font-medium leading-3 text-verde-text-title-le-medic">Ciudad</label>
 							<div class="mt-2">
-								<input type="text" name="ciudad" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+								<input type="text" name="ciudad" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-verde-text-title-le-medic sm:text-sm sm:leading-6" required>
 							</div>
 							</div>
 								<div class="col-span-full">
 								  <div class="relative flex gap-x-3">
 									<div class="flex h-6 items-center">
-									  <input id="comments" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" required>
+									  <input id="comments" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-verde-text-title-le-medic focus:ring-1" required>
 									</div>
 									<div class="text-sm leading-6">
 									  <label for="comments" class="font-medium text-verde-text-title-le-medic text-xs leading-3">Acepto los términos y condiciones del tratamiento de mis datos personales conforme a la Ley</label>
