@@ -1,5 +1,4 @@
 ---
-import { Carousel } from "@fancyapps/ui/dist/carousel/carousel.esm.js";
 import { Image } from "astro:assets";
 import slide1 from '../img/slider/slide1.jpg';
 import slide2 from '../img/slider/slide2.jpg'
@@ -7,21 +6,6 @@ import slide3 from '../img/slider/slide3.jpg'
 import slide4 from '../img/slider/slide4.jpg'
 import slide5 from '../img/slider/slide5.jpg'
 import slide6 from '../img/slider/slide6.jpg'
-
-
-
-import "@fancyapps/ui/dist/carousel/carousel.css";
-
-import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js";
-import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
-    const container = document.getElementById("myCarousel");
-    const options = { 
-        Autoplay: {
-            timeout: 4000,
-        }, 
-        Dots: false
-    };
-    new Carousel(container, options, { Autoplay });
 ---
 
 <div class="f-carousel" id="myCarousel">
@@ -103,5 +87,18 @@ import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
     }
 </style>
 <script>
-   
+    import { Carousel } from "@fancyapps/ui/dist/carousel/carousel.esm.js";
+    import "@fancyapps/ui/dist/carousel/carousel.css";
+
+    import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js";
+    import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
+
+    const container = document.getElementById("myCarousel");
+    const options = {
+        Autoplay: {
+            timeout: 4000,
+        },
+    };
+
+    new Carousel(container, options, { Autoplay });
 </script>
