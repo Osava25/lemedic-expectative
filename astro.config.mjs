@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   vite: {
     ssr: {
-      external: ["@fancyapps/ui", "@astrojs/react"],
+      external: ["@astrojs/tailwind", "@astrojs/react"],
     },
   },
 });
