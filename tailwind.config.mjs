@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"verde-text-title-le-medic": "#385F5D"
+				"verde-text-title-le-medic": "#385F5D",
+				"verde-claro-le-medic": "#45D8B6"
 			},
 
 			backgroundImage: {
