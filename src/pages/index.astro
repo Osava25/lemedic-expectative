@@ -1,16 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import logoLeMedic from '../../src/img/logo-lemedic-newslogan.png'
-import imgBg from '../img/bg-lemedic-exp-min.jpg'
+import logoSloganLeMedic from '../img/logo-color-slogan.png'
 import SliderExpectative from '../components/SliderExpectative.astro'
 ---
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logosimbolo-le-medic.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:image" content="/bg-fachada-vert800.jpeg">
 		<title>Bienvenidos a Le Medic</title>
 </head>
 <body>
@@ -21,7 +22,7 @@ import SliderExpectative from '../components/SliderExpectative.astro'
             <!-- <h1 class="md:text-6xl text-3xl text-white font-bold text-center md:text-start">Llega a Barranquilla el primer centro médico premium de Colombia.</h1> -->
         </div>
         <div class="flex flex-col items-center justify-center py-12 xl:pt-12 xl:pb-0">
-				<Image src={logoLeMedic} alt="texto descriptivo" width="200" />
+				<Image src={logoSloganLeMedic} alt="texto descriptivo" width="200" />
 				<h1 class="text-verde-text-title-le-medic px-2 font-serif text-xl md:text-2xl xl:text-2xl text-center">Llega a <span class="text-verde-claro-le-medic">Barranquilla</span> el primer centro médico Premium de Colombia</h1>
 
 				<div class="w-5/6 px-8 py-8 bg-gray-100 mt-3">
